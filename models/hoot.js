@@ -20,7 +20,7 @@ const hootSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    categoty: {
+    category: {
         type: String,
         required: true,
         enum: ['News', 'Sports', 'Games', 'Movies', 'Music', 'Television']

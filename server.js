@@ -5,9 +5,13 @@ const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
 const logger = require('morgan');
+
+
 const testJwtRouter = require('./controllers/test-jws.js');
 const authRouter = require('./controllers/auth');
 const userRouter = require('./controllers/users.js');
+const hootsRouter = require("./controllers/hoots.js");
+
 
 mongoose.connect(process.env.MONGODB_URI);
 
@@ -18,6 +22,7 @@ mongoose.connection.on('connected', () => {
 app.use(cors());
 app.use(express.json());
 app.use(logger('dev'));
+app.use("/hoots", hootsRouter);
 
 // Routes go here
 app.use('/auth', authRouter);
