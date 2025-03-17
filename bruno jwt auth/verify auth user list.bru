@@ -1,0 +1,15 @@
+meta {
+  name: verify auth user list
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/users
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiYWRtaW4xIiwiX2lkIjoiNjdkMzBkMTI3YzI1YmZlNWVjMzdjMDdiIn0sImlhdCI6MTc0MTg4NTE3N30.QXgwSNW9UItS4jTTFe-4W9q2Nnifa3GkZ_8ZdTusJQI
+}

@@ -1,0 +1,18 @@
+meta {
+  name: make user
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/auth/sign-up
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "username": "admin3",
+    "password": "password"
+  }
+}
